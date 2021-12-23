@@ -1,0 +1,120 @@
+<!-- <div class="rectangle">
+  <div class="Rocket">
+      <div class="DyeigMill">Dyeing Mill</div> 
+  </div>
+   <div class="picrec"></div>  -->
+<!--   
+  <div class="picrec"></div>
+  <div class="date">Thu 2,Dec 21</div> -->
+  <!-- <div class="name">ram sharma</div> -->
+  <!-- <div class="sidebar">
+    <div class="sidebarbox"></div>
+    <div class="process">Process</div>
+    <div class="sidebarbox1"></div>
+    <div class="maintenance">maintenance</div>
+     
+  </div>
+  <div class="whitebox">
+    <div class="blueblock"></div>
+    <div class="sikkareport">sikka report</div>
+    <div class="blank">blank</div>
+    <div class="bigheading">Sikka Report</div>
+    <div class="master">Master 1</div>
+    <div class="masterarrow"></div>
+
+
+  </div> -->
+<!-- </div> -->
+<!-- <div>
+  <div class="sidebar"></div>
+</div> -->
+
+
+<!-- MATERIAL ANGULAR -->
+<mat-toolbar color="primary">
+  <span class="rocket"></span>
+  <span class="Dyeingmill">Dyeing Mill</span>
+  <span class="example-spacer"></span>
+  <span class="date">WED 22, DEC 21</span>
+  <span class="image"></span>
+  <span class="name">ram sharma</span>
+  </mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav class="sidenav" mode="side"
+              opened="true"
+              [fixedInViewport]="true"
+              [fixedTopGap]="64">
+              <mat-icon class="fileicon">file_copy</mat-icon>
+              <span class="fileicontext">process</span><br>
+              <mat-icon class="maintenanceicone">settings</mat-icon>
+              <span class="maintenanceiconetext">maintenance</span><br>
+  </mat-sidenav>
+</mat-sidenav-container>
+<div>
+  <mat-tab-group class="tabs"  >
+    <mat-tab label="sikka report"></mat-tab>
+    <mat-tab label="blank"></mat-tab>
+  </mat-tab-group>
+  <span class="centersikkareport">Sikka Report</span>
+ 
+  <section>
+    <mat-form-field  class="drp">
+      <mat-label class="drp">master1</mat-label>
+      <mat-select [formControl]="selectedFW">
+        <mat-option *ngFor="let framwork of frameworks" [value]="framwork">
+        {{ framwork }}
+       </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </section>
+
+  <mat-form-field class="datepicker">
+    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date">
+    <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+ </mat-form-field>
+</div>
+<div layout="row">
+  <!-- <div flex="20">
+    [flex="20"]
+  </div> -->
+  <div flex-gt-sm="66"class="div">
+    <span class="innerspan1">1.</span>
+    <section>
+      <mat-form-field  class="innerdrp" appearance="outline">
+        <mat-label class="drp">Master Name</mat-label>
+        <mat-select [formControl]="selectedFW">
+          <mat-option *ngFor="let framwork of frameworks" [value]="framwork">
+          {{ framwork }}
+         </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </section>
+
+    
+    <section>
+      <span class="innerspan2">2.</span>
+      <mat-form-field  class="innerdrp" appearance="outline">
+        <mat-label class="drp">Master Name</mat-label>
+        <mat-select [formControl]="selectedFW">
+          <mat-option *ngFor="let framwork of frameworks" [value]="framwork">
+          {{ framwork }}
+         </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </section>
+</div>
+</div>
+
+
+
+
+  
+
+
+
+
+
+  
+
